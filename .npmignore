@@ -4,3 +4,7 @@ rollup.config.js
 src
 node_modules
 coverage
+.github
+tests
+jest.config.js
+.nvmrc

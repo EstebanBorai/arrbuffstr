@@ -1,6 +1,6 @@
 {
   "name": "arrbuffstr",
-  "version": "0.1.0-prerelease",
+  "version": "0.1.1-prerelease",
   "description": "Creates Strings from ArrayBuffers and viceversa in NodeJS and the Browser",
   "main": "./lib/index.js",
   "directories": {

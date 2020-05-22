@@ -1,6 +1,6 @@
 <div align="center">
   <img 
-    src="https://raw.githubusercontent.com/estebanborai/react-device-context/master/docs/reactjs.png"
+    src="https://raw.githubusercontent.com/estebanborai/arrbuffstr/master/docs/icon.png"
     height="120"
     width="120"
   />
