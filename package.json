@@ -1,0 +1,51 @@
+{
+  "name": "arrbuffstr",
+  "version": "0.1.0",
+  "description": "Creates Strings from ArrayBuffers and viceversa in NodeJS and the Browser",
+  "main": "./lib/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.5",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.10.5",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.2"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint \"**/*.ts\"",
+    "prepublish": "rm -rf ./lib && npm run build",
+    "test": "npm-run-all test:*",
+    "test:browser": "jest --env=jsdom ./tests/browser/**",
+    "test:node": "jest --env=node ./tests/node/**",
+    "coverage:browser": "jest --env=jsdom --coverage ./tests/browser/**",
+    "coverage:node": "jest --env=node --coverage ./tests/node/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estebanborai/arrbuffstr.git"
+  },
+  "keywords": [
+    "ArrayBuffer",
+    "websocket",
+    "string",
+    "bytes",
+    "data",
+    "transform"
+  ],
+  "author": "Esteban Borai <estebanborai@gmail.com> (https://github.com/estebanborai)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/estebanborai/arrbuffstr/issues"
+  },
+  "homepage": "https://github.com/estebanborai/arrbuffstr#readme"
+}
