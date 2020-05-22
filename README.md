@@ -9,3 +9,23 @@
   <br />
   <span>Creates Strings from ArrayBuffers and viceversa in NodeJS and the Browser</span>
 </div>
+
+## Installation
+
+```sh
+npm install arrbuffstr
+```
+
+## Usage
+
+```js
+import ArrBuffStr from 'arrbuffstr';
+
+const { toArrayBuffer, toString } = ArrBuffStr();
+
+// [object ArrayBuffer]
+const arrbuff = toArrayBuffer('hello');
+
+// 'hello'
+const str = toString(arrbuff);
+```
