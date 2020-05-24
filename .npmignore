@@ -8,3 +8,4 @@ coverage
 tests
 jest.config.js
 .nvmrc
+docs
