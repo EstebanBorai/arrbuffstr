@@ -1,12 +1,11 @@
 {
   "name": "arrbuffstr",
-  "version": "0.1.1-prerelease",
+  "version": "0.1.1",
   "description": "Creates Strings from ArrayBuffers and viceversa in NodeJS and the Browser",
   "main": "./lib/index.js",
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.5",
@@ -23,12 +22,12 @@
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint \"**/*.ts\"",
-    "prepublish": "rm -rf ./lib && npm run build",
     "test": "npm-run-all test:*",
     "test:browser": "jest --env=jsdom ./tests/browser/**",
     "test:node": "jest --env=node ./tests/node/**",
     "coverage:browser": "jest --env=jsdom --coverage ./tests/browser/**",
-    "coverage:node": "jest --env=node --coverage ./tests/node/**"
+    "coverage:node": "jest --env=node --coverage ./tests/node/**",
+    "prepublishOnly": "rm -rf ./lib && npm test && npm run build"
   },
   "repository": {
     "type": "git",
