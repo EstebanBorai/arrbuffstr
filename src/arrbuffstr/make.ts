@@ -1,7 +1,7 @@
 import getEnv, { Env } from '../utils/get-env';
 import { toArrayBufferFactory, toStringFactory } from '../factory/index';
 
-interface ArrBuffStr {
+export interface ArrBuffStr {
   toArrayBuffer: StringToArrayBuffer;
   toString: ArrayBufferToString;
 }
@@ -10,7 +10,10 @@ function make(): ArrBuffStr {
   const currentEnv: Env = getEnv();
 
   if (currentEnv === 'Node') {
-    throw new Error(`ArrBuffStr is not supported!`);
+    return {
+      toArrayBuffer: toArrayBufferFactory(Env.Node),
+      toString: toStringFactory(Env.Node)
+    };
   }
 
   return {

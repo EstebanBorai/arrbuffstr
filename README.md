@@ -29,3 +29,6 @@ const arrbuff = toArrayBuffer('hello');
 // 'hello'
 const str = toString(arrbuff);
 ```
+
+## Contributions
+Any contribution is welcome! Feel free to open a PR or an issue.
