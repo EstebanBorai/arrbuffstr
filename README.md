@@ -12,8 +12,26 @@
 
 ## Installation
 
+### NPM
+
+The latest version available in NPM is `v0.1.1`:
+
 ```sh
 npm install arrbuffstr
+```
+
+### GitHub Package Manager
+
+Using the GitHub Package Manager this package is installed by adding a `.npmrc` file with the following:
+
+```
+@estebanborai:registry=https://npm.pkg.github.com
+```
+
+And the running:
+
+```bash
+npm install @estebanborai/arrbuffstr
 ```
 
 ## Usage
