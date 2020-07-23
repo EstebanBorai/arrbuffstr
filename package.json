@@ -1,8 +1,11 @@
 {
-  "name": "arrbuffstr",
+  "name": "@estebanborai/arrbuffstr",
   "version": "0.1.1",
   "description": "Creates Strings from ArrayBuffers and viceversa in NodeJS and the Browser",
   "main": "./lib/index.js",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "directories": {
     "doc": "docs"
   },
