@@ -5,9 +5,7 @@ export default {
   output: {
     dir: 'lib',
     format: 'umd',
-    name: 'arrbuffstr'
+    name: 'arrbuffstr',
   },
-  plugins: [
-    typescript(),
-  ]
+  plugins: [typescript()],
 };

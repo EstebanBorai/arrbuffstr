@@ -19,7 +19,6 @@ describe('browser with TexEncoder and TextDecoder support', () => {
     expect(arrbuff).toBeInstanceOf(ArrayBuffer);
   });
 
-
   it('in and out', () => {
     expect.assertions(2);
 

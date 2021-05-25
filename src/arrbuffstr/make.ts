@@ -12,13 +12,13 @@ function make(): ArrBuffStr {
   if (currentEnv === 'Node') {
     return {
       toArrayBuffer: toArrayBufferFactory(Env.Node),
-      toString: toStringFactory(Env.Node)
+      toString: toStringFactory(Env.Node),
     };
   }
 
   return {
     toArrayBuffer: toArrayBufferFactory(Env.Browser),
-    toString: toStringFactory(Env.Browser)
+    toString: toStringFactory(Env.Browser),
   };
 }
 

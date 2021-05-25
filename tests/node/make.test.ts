@@ -4,7 +4,6 @@ test('creates an ArrBuffStr instance without throwing', () => {
   expect(makeArrBuffStr).not.toThrow();
 });
 
-
 test('creates toArrayBuffer', () => {
   const instance = makeArrBuffStr();
 
@@ -16,7 +15,6 @@ test('creates toString', () => {
 
   expect(instance.toString).not.toBe(undefined);
 });
-
 
 test('transforms a string into an array buffer without errors', () => {
   const instance = makeArrBuffStr();

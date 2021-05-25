@@ -6,9 +6,9 @@ function toArrayBufferFactory(env: Env): StringToArrayBuffer {
       return (str: string): ArrayBuffer => {
         const encoder = new TextEncoder();
         const unint8 = encoder.encode(str);
-  
+
         return unint8.buffer;
-      }
+      };
     }
 
     return (str: string): ArrayBuffer => {
@@ -24,7 +24,7 @@ function toArrayBufferFactory(env: Env): StringToArrayBuffer {
       }
 
       return buff;
-    }
+    };
   }
 
   // Valid for NodeJS v8.3.0>=
@@ -34,7 +34,7 @@ function toArrayBufferFactory(env: Env): StringToArrayBuffer {
       const unint8 = encoder.encode(str);
 
       return unint8.buffer;
-    }
+    };
   }
 
   return (str: string): ArrayBuffer => {
@@ -50,7 +50,7 @@ function toArrayBufferFactory(env: Env): StringToArrayBuffer {
     }
 
     return buff;
-  }
+  };
 }
 
 export default toArrayBufferFactory;

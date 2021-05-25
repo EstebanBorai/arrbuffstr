@@ -1,6 +1,6 @@
 export enum Env {
   Browser = 'Browser',
-  Node = 'Node'
+  Node = 'Node',
 }
 
 function getEnv(): Env {
@@ -8,7 +8,11 @@ function getEnv(): Env {
     return Env.Browser;
   }
 
-  if (typeof process !== 'undefined' && process.versions !== null && process.versions.node !== null) {
+  if (
+    typeof process !== 'undefined' &&
+    process.versions !== null &&
+    process.versions.node !== null
+  ) {
     return Env.Node;
   }
 

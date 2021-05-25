@@ -21,19 +21,10 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "paths": {
-      "factory/*": [
-        "src/factory/*"
-      ],
-      "utils/*": [
-        "src/utils/*"
-      ],
+      "factory/*": ["src/factory/*"],
+      "utils/*": ["src/utils/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-  ],
-  "exclude": [
-    "node_modules",
-    "lib"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "lib"]
 }
