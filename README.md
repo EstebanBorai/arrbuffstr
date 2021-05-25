@@ -12,7 +12,7 @@
 
 ## Installation
 
-```shell
+```sh
 # using npm
 npm install arrbuffstr
 
@@ -32,6 +32,31 @@ const arrbuff = toArrayBuffer('hello');
 
 // 'hello'
 const str = toString(arrbuff);
+```
+
+## Releasing
+
+This package makes use of GitHub Actions for publishing new versions to NPM.
+The wofklow is triggered when new releases prefixed with `v` are pushed to
+GitHub.
+
+First bump the current version using `npm` as follows:
+
+```sh
+# for versions with breaking changes use `major`
+npm version major
+
+# for versions with non-breaking changes use `minor`
+npm version minor
+
+# for patch versions use `patch`
+npm version patch
+```
+
+Then push the repository including tag metadata as follows
+
+```sh
+git push origin main --follow-tags
 ```
 
 ## Contributions
