@@ -17,6 +17,7 @@
     "eslint": "^7.0.0",
     "jest": "^26.0.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.0",
     "rollup": "^2.10.5",
     "rollup-plugin-typescript2": "^0.27.1",
     "ts-jest": "^26.0.0",
@@ -24,7 +25,9 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint \"**/*.ts\"",
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "fmt": "eslint . --ext .js,.jsx,.ts,.tsx --fix && prettier --write \"**/*.{json,md,yml,ts,tsx,js,jsx}\"",
+    "prettier": "prettier -c \"**/*.{md,json,yml,sh}\"",
     "test": "npm-run-all test:*",
     "test:browser": "jest --env=jsdom ./tests/browser/**",
     "test:node": "jest --env=node ./tests/node/**",
