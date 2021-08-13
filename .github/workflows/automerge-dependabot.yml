@@ -3,13 +3,12 @@ on:
   pull_request:
 
 jobs:
-  worker:
+  merge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    github-token: ${{github.token}}
     steps:
-      - name: automerge
-        uses: actions/github-script@0.2.0
+      - name: Merge Pull Request
+        uses: actions/github-script@v4
         with:
           script: |
             github.pullRequests.createReview({
