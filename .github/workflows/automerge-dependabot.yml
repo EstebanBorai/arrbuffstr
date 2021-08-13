@@ -6,19 +6,8 @@ jobs:
   merge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Merge Pull Request
-        uses: actions/github-script@v4
-        with:
-          script: |
-            github.pullRequests.createReview({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number,
-              event: 'APPROVE'
-            })
-            github.pullRequests.merge({
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              pull_number: context.payload.pull_request.number
-            })
+      - name: Automerge Pull Request
+        uses: EstebanBorai/automerge-dependabot-action@0.1.0
