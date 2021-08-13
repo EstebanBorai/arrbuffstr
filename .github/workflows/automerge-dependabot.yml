@@ -1,13 +1,11 @@
-name: 'Automerge Dependabot'
-on:
-  pull_request:
+name: 'Merge Dependabot Pull Request'
+on: [push, pull_request]
 
 jobs:
-  merge:
+  automerge:
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - name: Automerge Pull Request
-        uses: EstebanBorai/automerge-dependabot-action@0.1.0
+      - uses: fastify/github-action-merge-dependabot@v2.1.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
